@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AgriMarket — UIKit</title>
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<header class="barra">
+  <a class="marca" href="index.html"><span class="logo"></span> AgriMarket</a>
+  <nav class="barra-enlaces" aria-label="Secciones del UIKit">
+    <a href="#tokens">Tokens</a>
+    <a href="#foundations">Foundations</a>
+    <a href="#components">Components</a>
+    <a href="#patterns">Patterns</a>
+  </nav>
+</header>
+
+<main class="ancho" id="contenido">
+  <div>
+    <h1 class="display">UIKit de AgriMarket</h1>
+    <p class="cuerpo t-medio" style="max-width:62ch;margin-top:8px">
+      Guía de estilos de la plataforma, organizada en cuatro bloques: tokens, foundations,
+      components y patterns. Todo lo que aparece aquí es lo que usan las pantallas del prototipo,
+      con los mismos nombres de variable que el archivo de Figma.
+    </p>
+  </div>
+
+  <!-- ==================== 1. TOKENS ==================== -->
+  <section class="uk-bloque" id="tokens">
+    <header>
+      <p class="uk-numero">Bloque 1</p>
+      <h2 class="titulo">Tokens</h2>
+      <p class="cuerpo t-medio">Los valores en bruto. Nada de esto se escribe a mano en una pantalla: se referencia por su nombre.</p>
+    </header>
+
+    <div class="uk-grupo">
+      <h3>Paleta de color</h3>
+      <p class="cuerpo-s t-medio">Marca</p>
+      <div class="rejilla-color">
+        <div class="swatch"><div class="muestra" style="background:#1B7F3B"></div>
+          <div class="datos-color"><span class="etiqueta">Primario</span><code>--marca-primario · #1B7F3B</code></div></div>
+        <div class="swatch"><div class="muestra" style="background:#14532D"></div>
+          <div class="datos-color"><span class="etiqueta">Primario oscuro</span><code>--marca-primario-oscuro · #14532D</code></div></div>
+        <div class="swatch"><div class="muestra" style="background:#E8F5EC"></div>
+          <div class="datos-color"><span class="etiqueta">Primario suave</span><code>--marca-primario-suave · #E8F5EC</code></div></div>
+      </div>
+
+      <p class="cuerpo-s t-medio">Texto</p>
+      <div class="rejilla-color">
+        <div class="swatch"><div class="muestra" style="background:#0F172A"></div>
+          <div class="datos-color"><span class="etiqueta">Fuerte</span><code>--texto-fuerte · #0F172A</code></div></div>
+        <div class="swatch"><div class="muestra" style="background:#475569"></div>
+          <div class="datos-color"><span class="etiqueta">Medio</span><code>--texto-medio · #475569</code></div></div>
+        <div class="swatch"><div class="muestra" style="background:#94A3B8"></div>
+          <div class="datos-color"><span class="etiqueta">Suave</span><code>--texto-suave · #94A3B8</code></div></div>
+        <div class="swatch"><div class="muestra" style="background:#FFFFFF;border-bottom:1px solid #E2E8F0"></div>
+          <div class="datos-color"><span class="etiqueta">Inverso</span><code>--texto-inverso · #FFFFFF</code></div></div>
+      </div>
+
+      <p class="cuerpo-s t-medio">Superficie</p>
+      <div class="rejilla-color">
+        <div class="swatch"><div class="muestra" style="background:#F8FAFC;border-bottom:1px solid #E2E8F0"></div>
+          <div class="datos-color"><span class="etiqueta">Fondo</span><code>--superficie-fondo · #F8FAFC</code></div></div>
+        <div class="swatch"><div class="muestra" style="background:#FFFFFF;border-bottom:1px solid #E2E8F0"></div>
+          <div class="datos-color"><span class="etiqueta">Base</span><code>--superficie-base · #FFFFFF</code></div></div>
+        <div class="swatch"><div class="muestra" style="background:#E2E8F0"></div>
+          <div class="datos-color"><span class="etiqueta">Borde</span><code>--superficie-borde · #E2E8F0</code></div></div>
+      </div>
+
+      <p class="cuerpo-s t-medio">Estado</p>
+      <div class="rejilla-color">
+        <div class="swatch"><div class="muestra" style="background:#15803D"></div>
+          <div class="datos-color"><span class="etiqueta">Éxito</span><code>--estado-exito · #15803D</code></div></div>
+        <div class="swatch"><div class="muestra" style="background:#DCFCE7"></div>
+          <div class="datos-color"><span class="etiqueta">Éxito suave</span><code>--estado-exito-suave · #DCFCE7</code></div></div>
+        <div class="swatch"><div class="muestra" style="background:#B91C1C"></div>
+          <div class="datos-color"><span class="etiqueta">Error</span><code>--estado-error · #B91C1C</code></div></div>
+        <div class="swatch"><div class="muestra" style="background:#FEE2E2"></div>
+          <div class="datos-color"><span class="etiqueta">Error suave</span><code>--estado-error-suave · #FEE2E2</code></div></div>
+        <div class="swatch"><div class="muestra" style="background:#B45309"></div>
+          <div class="datos-color"><span class="etiqueta">Aviso</span><code>--estado-aviso · #B45309</code></div></div>
+        <div class="swatch"><div class="muestra" style="background:#FEF3C7"></div>
+          <div class="datos-color"><span class="etiqueta">Aviso suave</span><code>--estado-aviso-suave · #FEF3C7</code></div></div>
+        <div class="swatch"><div class="muestra" style="background:#1D4ED8"></div>
+          <div class="datos-color"><span class="etiqueta">Informativo</span><code>--estado-info · #1D4ED8</code></div></div>
+      </div>
+      <p class="uk-pie">El verde de marca sobre blanco da una relación de contraste de 5,07:1, por encima del mínimo de 4,5:1 del criterio 1.4.3 de la WCAG 2.2 en nivel AA.</p>
+    </div>
+
+    <div class="uk-grupo">
+      <h3>Escala de espaciado</h3>
+      <div class="escala">
+        <div class="linea"><code style="width:70px">--e-1</code><span class="marca-esp" style="width:4px"></span> 4 px</div>
+        <div class="linea"><code style="width:70px">--e-2</code><span class="marca-esp" style="width:8px"></span> 8 px</div>
+        <div class="linea"><code style="width:70px">--e-3</code><span class="marca-esp" style="width:12px"></span> 12 px</div>
+        <div class="linea"><code style="width:70px">--e-4</code><span class="marca-esp" style="width:16px"></span> 16 px</div>
+        <div class="linea"><code style="width:70px">--e-5</code><span class="marca-esp" style="width:24px"></span> 24 px</div>
+        <div class="linea"><code style="width:70px">--e-6</code><span class="marca-esp" style="width:32px"></span> 32 px</div>
+        <div class="linea"><code style="width:70px">--e-7</code><span class="marca-esp" style="width:48px"></span> 48 px</div>
+      </div>
+      <p class="uk-pie">Todos los valores son múltiplos de 4 px. Esa rejilla es la que mantiene alineadas las pantallas de escritorio y de móvil.</p>
+    </div>
+
+    <div class="uk-grupo">
+      <h3>Radios de borde</h3>
+      <div class="radios">
+        <div class="caja-radio" style="border-radius:8px">8 px<br>--r-sm</div>
+        <div class="caja-radio" style="border-radius:10px">10 px<br>--r-md</div>
+        <div class="caja-radio" style="border-radius:12px">12 px<br>--r-lg</div>
+        <div class="caja-radio" style="border-radius:16px">16 px<br>--r-xl</div>
+        <div class="caja-radio" style="border-radius:999px">pastilla<br>--r-full</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 2. FOUNDATIONS ==================== -->
+  <section class="uk-bloque" id="foundations">
+    <header>
+      <p class="uk-numero">Bloque 2</p>
+      <h2 class="titulo">Foundations</h2>
+      <p class="cuerpo t-medio">Las reglas que se aplican a toda la interfaz: tipografía, iconografía, contenedores y accesibilidad.</p>
+    </header>
+
+    <div class="uk-grupo">
+      <h3>Tipografía</h3>
+      <p class="cuerpo-s t-medio">Familia: Inter, con respaldo en Segoe UI y la tipografía del sistema.</p>
+      <div class="tipos">
+        <div class="fila-tipo"><code>Display · 32/40 · 700</code><p class="display">Productos del campo</p></div>
+        <div class="fila-tipo"><code>Título · 24/32 · 700</code><p class="titulo">Productos del campo</p></div>
+        <div class="fila-tipo"><code>Subtítulo · 20/28 · 600</code><p class="subtitulo">Productos del campo</p></div>
+        <div class="fila-tipo"><code>Cuerpo · 16/24 · 400</code><p class="cuerpo">Productos del campo, directo de quien los cultiva.</p></div>
+        <div class="fila-tipo"><code>Cuerpo fuerte · 16/24 · 600</code><p class="cuerpo-fuerte">Productos del campo, directo de quien los cultiva.</p></div>
+        <div class="fila-tipo"><code>Cuerpo S · 14/20 · 400</code><p class="cuerpo-s">Productos del campo, directo de quien los cultiva.</p></div>
+        <div class="fila-tipo"><code>Etiqueta · 14/20 · 500</code><p class="etiqueta">Categoría</p></div>
+        <div class="fila-tipo"><code>Nota · 12/16 · 400</code><p class="nota">Precio por kilogramo, sujeto a disponibilidad.</p></div>
+      </div>
+    </div>
+
+    <div class="uk-grupo">
+      <h3>Iconografía</h3>
+      <p class="cuerpo-s t-medio">Trazo de 1,75 px sobre una caja de 24 × 24 px, esquinas y uniones redondeadas. Heredan el color del texto, así que sirven igual sobre fondo claro y sobre el verde de marca.</p>
+      <div class="rejilla-iconos">
+        <div class="icono-caja"><svg class="icono" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5 21 21"/></svg><span class="nota">buscar</span></div>
+        <div class="icono-caja"><svg class="icono" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6"/></svg><span class="nota">usuario</span></div>
+        <div class="icono-caja"><svg class="icono" viewBox="0 0 24 24"><path d="M4 11 12 4l8 7"/><path d="M6 10v10h12V10"/></svg><span class="nota">inicio</span></div>
+        <div class="icono-caja"><svg class="icono" viewBox="0 0 24 24"><path d="M5 19c0-8 6-13 14-13 0 8-5 14-14 13Z"/><path d="M5 19 11 13"/></svg><span class="nota">producto</span></div>
+        <div class="icono-caja"><svg class="icono" viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span class="nota">solicitud</span></div>
+        <div class="icono-caja"><svg class="icono" viewBox="0 0 24 24"><path d="M3 8l9-4 9 4v8l-9 4-9-4V8Z"/><path d="M3 8l9 4 9-4"/><path d="M12 12v8"/></svg><span class="nota">inventario</span></div>
+        <div class="icono-caja"><svg class="icono" viewBox="0 0 24 24"><path d="M3 12V4h8l9 9-8 8-9-9Z"/><circle cx="7.5" cy="7.5" r="1.3"/></svg><span class="nota">precio</span></div>
+        <div class="icono-caja"><svg class="icono" viewBox="0 0 24 24"><path d="M6 9a6 6 0 0 1 12 0c0 5 2 6 2 6H4s2-1 2-6Z"/><path d="M10 20a2 2 0 0 0 4 0"/></svg><span class="nota">avisos</span></div>
+        <div class="icono-caja"><svg class="icono" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4V5Z"/></svg><span class="nota">mensaje</span></div>
+        <div class="icono-caja"><svg class="icono" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span class="nota">fecha</span></div>
+        <div class="icono-caja"><svg class="icono" viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M6 21v-6M12 21V10M18 21v-8"/></svg><span class="nota">reportes</span></div>
+        <div class="icono-caja"><svg class="icono" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/></svg><span class="nota">ajustes</span></div>
+        <div class="icono-caja"><svg class="icono" viewBox="0 0 24 24"><path d="M4 20h4L18 10l-4-4L4 16v4Z"/><path d="M14 6l4 4"/></svg><span class="nota">editar</span></div>
+        <div class="icono-caja"><svg class="icono" viewBox="0 0 24 24"><path d="M4 7h16"/><path d="M9 7V4h6v3"/><path d="M6 7l1 13h10l1-13"/></svg><span class="nota">eliminar</span></div>
+        <div class="icono-caja"><svg class="icono" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><span class="nota">agregar</span></div>
+        <div class="icono-caja"><svg class="icono" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg><span class="nota">atrás</span></div>
+        <div class="icono-caja"><svg class="icono" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg><span class="nota">confirmar</span></div>
+        <div class="icono-caja"><svg class="icono" viewBox="0 0 24 24"><path d="M12 4l9 16H3L12 4Z"/><path d="M12 10v4M12 17h.01"/></svg><span class="nota">alerta</span></div>
+        <div class="icono-caja"><svg class="icono" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg><span class="nota">cerrar</span></div>
+        <div class="icono-caja"><svg class="icono" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span class="nota">menú</span></div>
+        <div class="icono-caja"><svg class="icono" viewBox="0 0 24 24"><path d="M12 21s7-6 7-11a7 7 0 1 0-14 0c0 5 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg><span class="nota">ubicación</span></div>
+        <div class="icono-caja"><svg class="icono" viewBox="0 0 24 24"><path d="M4 6h16M7 12h10M10 18h4"/></svg><span class="nota">filtrar</span></div>
+      </div>
+    </div>
+
+    <div class="uk-grupo">
+      <h3>Contenedores y rejilla</h3>
+      <div class="uk-muestra" style="gap:var(--e-4)">
+        <div class="tarjeta" style="flex:1;min-width:240px">
+          <p class="cuerpo-fuerte">Móvil</p>
+          <p class="cuerpo-s t-medio">Ancho máximo de 420 px, una sola columna, 20 px de margen lateral. Es el contenedor del recorrido del comprador.</p>
+        </div>
+        <div class="tarjeta" style="flex:1;min-width:240px">
+          <p class="cuerpo-fuerte">Escritorio</p>
+          <p class="cuerpo-s t-medio">Ancho máximo de 1180 px, 32 px arriba y 24 px a los lados. Es el contenedor de las pantallas de administración.</p>
+        </div>
+        <div class="tarjeta" style="flex:1;min-width:240px">
+          <p class="cuerpo-fuerte">Punto de quiebre</p>
+          <p class="cuerpo-s t-medio">En 960 px la tabla pasa a tarjetas y el menú lateral se convierte en barra horizontal.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="uk-grupo">
+      <h3>Accesibilidad</h3>
+      <ul class="cuerpo-s t-medio" style="margin:0;padding-left:20px;display:grid;gap:8px">
+        <li>Contraste mínimo de 4,5:1 en texto normal, según el criterio 1.4.3 de la WCAG 2.2 en nivel AA.</li>
+        <li>Área táctil de 48 px de alto como mínimo en botones y campos.</li>
+        <li>Ningún estado se comunica solo con color: siempre hay texto y, en los errores, también un símbolo.</li>
+        <li>Foco visible con un contorno de 3 px en cualquier elemento que se pueda recorrer con el teclado.</li>
+        <li>Enlace de salto al contenido como primer elemento de cada pantalla.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ==================== 3. COMPONENTS ==================== -->
+  <section class="uk-bloque" id="components">
+    <header>
+      <p class="uk-numero">Bloque 3</p>
+      <h2 class="titulo">Components</h2>
+      <p class="cuerpo t-medio">Las piezas sueltas, con sus variantes y sus estados. Cada una existe como componente en el archivo de Figma.</p>
+    </header>
+
+    <div class="uk-grupo">
+      <h3>Botones</h3>
+      <div class="uk-muestra">
+        <button class="boton boton-primario">Primario</button>
+        <button class="boton boton-secundario">Secundario</button>
+        <button class="boton boton-primario" style="background:var(--marca-primario-oscuro)">Primario · sobre</button>
+        <button class="boton boton-primario" style="opacity:.45;cursor:not-allowed" disabled>Primario · inhabilitado</button>
+      </div>
+      <div class="uk-muestra">
+        <button class="boton boton-primario"><svg class="icono icono-s" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg> Con icono</button>
+        <button class="boton boton-secundario"><svg class="icono icono-s" viewBox="0 0 24 24"><path d="M4 20h4L18 10l-4-4L4 16v4Z"/><path d="M14 6l4 4"/></svg> Editar</button>
+      </div>
+      <div style="max-width:380px"><button class="boton boton-primario boton-bloque">De bloque, para móvil</button></div>
+      <p class="uk-pie">Alto mínimo de 48 px en todas las variantes. El botón de bloque ocupa el ancho del contenedor y se usa como acción principal al final de las pantallas de móvil.</p>
+    </div>
+
+    <div class="uk-grupo">
+      <h3>Elementos de formulario</h3>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:var(--e-4)">
+        <div class="campo">
+          <label for="c1">Nombre del producto <span class="obligatorio">*</span></label>
+          <input id="c1" type="text" placeholder="Ej.: Aguacate hass">
+          <span class="ayuda">Como lo va a ver el comprador.</span>
+        </div>
+        <div class="campo exito">
+          <label for="c2">Correo</label>
+          <input id="c2" type="email" value="maria@correo.com">
+          <span class="ayuda">✓ Correo disponible</span>
+        </div>
+        <div class="campo error">
+          <label for="c3">Correo</label>
+          <input id="c3" type="email" value="maria@correo.com">
+          <span class="ayuda">⚠ Ese correo ya tiene cuenta. Inicia sesión o usa otro correo.</span>
+        </div>
+        <div class="campo">
+          <label for="c4">Categoría</label>
+          <select id="c4"><option>Frutas</option><option>Verduras</option><option>Granos</option><option>Lácteos</option></select>
+        </div>
+        <div class="campo">
+          <label for="c5">Precio por kilo</label>
+          <input id="c5" type="text" value="$ 6.500">
+          <span class="ayuda">Solo números, sin puntos.</span>
+        </div>
+        <div class="campo" style="grid-column:1/-1">
+          <label for="c6">Descripción</label>
+          <textarea id="c6" rows="3" placeholder="Cuenta de dónde viene y cómo se cosecha."></textarea>
+        </div>
+      </div>
+      <p class="uk-pie">El estado de cada campo se comunica con el color del borde, con un símbolo y con un texto, para que no dependa de distinguir rojo y verde.</p>
+    </div>
+
+    <div class="uk-grupo">
+      <h3>Cards</h3>
+      <p class="cuerpo-s t-medio">Cuatro variantes: producto en listado, producto en catálogo, solicitud e indicador.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:var(--e-4)">
+
+        <article class="tarjeta">
+          <div class="producto">
+            <div class="miniatura"></div>
+            <div>
+              <p class="cuerpo-fuerte">Aguacate hass</p>
+              <p class="cuerpo-s t-medio">Finca La Esperanza · Fusagasugá</p>
+              <p class="cuerpo-fuerte t-marca">$ 6.500 / kg</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="tarjeta">
+          <div class="foto-grande" style="height:120px"></div>
+          <div style="display:grid;gap:4px;margin-top:12px">
+            <span class="insignia insignia-exito">Disponible</span>
+            <p class="cuerpo-fuerte">Café pergamino</p>
+            <p class="cuerpo-s t-medio">12 kg en inventario</p>
+            <p class="cuerpo-fuerte t-marca">$ 18.000 / kg</p>
+          </div>
+        </article>
+
+        <article class="tarjeta">
+          <div class="entre">
+            <p class="cuerpo-fuerte">Solicitud #1042</p>
+            <span class="insignia insignia-aviso">Pendiente</span>
+          </div>
+          <p class="cuerpo-s t-medio" style="margin-top:8px">Carlos Rivera · 8 kg de tomate chonto</p>
+          <p class="nota t-suave" style="margin-top:4px">Recibida hace 2 horas</p>
+          <div class="fila-acciones" style="margin-top:12px">
+            <button class="boton boton-secundario">Rechazar</button>
+            <button class="boton boton-primario">Aceptar</button>
+          </div>
+        </article>
+
+        <article class="kpi kpi-verde">
+          <p class="etiqueta t-medio">Productos activos</p>
+          <p class="valor">14</p>
+          <p class="nota t-medio">2 más que la semana pasada</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="uk-grupo">
+      <h3>Barras de navegación</h3>
+
+      <p class="cuerpo-s t-medio">Superior de móvil, con retroceso y título</p>
+      <div style="max-width:420px;border:1px solid var(--superficie-borde);border-radius:var(--r-md);overflow:hidden">
+        <div class="barra">
+          <a class="volver" href="#components" aria-label="Volver">
+            <svg class="icono" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg>
+          </a>
+          <p class="cuerpo-fuerte">Catálogo</p>
+          <svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4"/></svg>
+        </div>
+      </div>
+
+      <p class="cuerpo-s t-medio">Superior de escritorio, con marca y enlaces</p>
+      <div style="border:1px solid var(--superficie-borde);border-radius:var(--r-md);overflow:hidden">
+        <div class="barra">
+          <a class="marca" href="#components"><span class="logo"></span> AgriMarket</a>
+          <nav class="barra-enlaces" aria-label="Ejemplo">
+            <a href="#components" aria-current="page">Inicio</a>
+            <a href="#components">Catálogo</a>
+            <a href="#components">Mis solicitudes</a>
+          </nav>
+          <button class="boton boton-primario">Entrar</button>
+        </div>
+      </div>
+
+      <p class="cuerpo-s t-medio">Inferior de móvil, para el recorrido del comprador</p>
+      <div style="max-width:420px;border:1px solid var(--superficie-borde);border-radius:var(--r-md);overflow:hidden">
+        <nav class="nav-inferior" aria-label="Ejemplo de navegación inferior">
+          <a href="#components" aria-current="page"><svg class="icono" viewBox="0 0 24 24"><path d="M4 11 12 4l8 7"/><path d="M6 10v10h12V10"/></svg>Inicio</a>
+          <a href="#components"><svg class="icono" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5 21 21"/></svg>Buscar</a>
+          <a href="#components"><svg class="icono" viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>Solicitudes</a>
+          <a href="#components"><svg class="icono" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6"/></svg>Cuenta</a>
+        </nav>
+      </div>
+
+      <p class="cuerpo-s t-medio">Lateral de escritorio, para el panel del productor</p>
+      <div style="max-width:280px;border:1px solid var(--superficie-borde);border-radius:var(--r-md);overflow:hidden">
+        <nav class="lateral" aria-label="Ejemplo de menú lateral">
+          <p class="etiqueta t-medio">Productor</p>
+          <ul>
+            <li><a href="#components" aria-current="page"><span class="punto"></span> Panel</a></li>
+            <li><a href="#components"><span class="punto"></span> Mis productos</a></li>
+            <li><a href="#components"><span class="punto"></span> Solicitudes</a></li>
+            <li><a href="#components"><span class="punto"></span> Reportes</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <p class="cuerpo-s t-medio">Pestañas, para alternar entre entrar y registrarse</p>
+      <div style="max-width:420px">
+        <ul class="pestanas">
+          <li><a href="#components" aria-current="page">Entrar</a></li>
+          <li><a href="#components">Crear cuenta</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="uk-grupo">
+      <h3>Insignias, chips y avisos</h3>
+      <div class="uk-muestra">
+        <span class="insignia insignia-exito">Disponible</span>
+        <span class="insignia insignia-aviso">Pendiente</span>
+        <span class="insignia insignia-error">Agotado</span>
+        <span class="insignia insignia-neutra">Borrador</span>
+      </div>
+      <ul class="chips">
+        <li><a class="chip" href="#components" aria-current="true">Todos (14)</a></li>
+        <li><a class="chip" href="#components">Disponibles (11)</a></li>
+        <li><a class="chip" href="#components">Agotados (3)</a></li>
+      </ul>
+      <div style="display:grid;gap:var(--e-3)">
+        <p class="aviso aviso-marca cuerpo-s">¿Ya enviaste una solicitud? Mira en qué va.</p>
+        <p class="aviso aviso-exito cuerpo-s">Tu cuenta quedó creada. Ya puedes publicar productos.</p>
+        <p class="aviso aviso-atencion cuerpo-s">Tienes 3 solicitudes sin responder hace más de 24 horas.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 4. PATTERNS ==================== -->
+  <section class="uk-bloque" id="patterns">
+    <header>
+      <p class="uk-numero">Bloque 4</p>
+      <h2 class="titulo">Patterns</h2>
+      <p class="cuerpo t-medio">Composiciones que se repiten en varias pantallas. Son los tres layouts genéricos y las situaciones que resuelven.</p>
+    </header>
+
+    <div class="uk-grupo">
+      <h3>Acceso a dos columnas</h3>
+      <p class="cuerpo-s t-medio">Panel de propuesta de valor a la izquierda y formulario en tarjeta a la derecha. En móvil las columnas se apilan. Lo usan Login y Registro.</p>
+      <div class="acceso" style="grid-template-columns:1fr 1fr">
+        <div class="valor-panel">
+          <p class="subtitulo t-marca">Vende directo, sin intermediarios</p>
+          <ul>
+            <li><span class="vineta"></span> Publica lo que tengas disponible esta semana</li>
+            <li><span class="vineta"></span> Recibe solicitudes de compradores de tu región</li>
+            <li><span class="vineta"></span> Responde desde el celular, donde estés</li>
+          </ul>
+        </div>
+        <div class="tarjeta formulario">
+          <ul class="pestanas">
+            <li><a href="#patterns" aria-current="page">Crear cuenta</a></li>
+            <li><a href="#patterns">Entrar</a></li>
+          </ul>
+          <div class="campo"><label for="p1">Nombre <span class="obligatorio">*</span></label><input id="p1" type="text" placeholder="María Gómez"></div>
+          <div class="campo"><label for="p2">Correo <span class="obligatorio">*</span></label><input id="p2" type="email" placeholder="maria@correo.com"></div>
+          <button class="boton boton-primario boton-bloque">Crear cuenta</button>
+          <p class="nota t-medio">Si solo vas a comprar, no necesitas cuenta.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="uk-grupo">
+      <h3>Listado con filtros y buscador</h3>
+      <p class="cuerpo-s t-medio">Barra de herramientas arriba, conteo en cada chip y resultados debajo. Lo usan Catálogo y Gestión de información.</p>
+      <div class="herramientas">
+        <div class="campo"><label class="nota" for="p3">Buscar</label><input id="p3" type="search" placeholder="Nombre del producto"></div>
+        <button class="boton boton-secundario"><svg class="icono icono-s" viewBox="0 0 24 24"><path d="M4 6h16M7 12h10M10 18h4"/></svg> Filtrar</button>
+        <button class="boton boton-primario"><svg class="icono icono-s" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg> Publicar</button>
+      </div>
+      <ul class="chips">
+        <li><a class="chip" href="#patterns" aria-current="true">Todos (14)</a></li>
+        <li><a class="chip" href="#patterns">Disponibles (11)</a></li>
+        <li><a class="chip" href="#patterns">Agotados (3)</a></li>
+      </ul>
+    </div>
+
+    <div class="uk-grupo">
+      <h3>Panel con indicadores</h3>
+      <p class="cuerpo-s t-medio">Tres indicadores arriba y un aviso que lleva a lo que necesita atención. Lo usan Panel principal y Reportes.</p>
+      <div class="kpis">
+        <div class="kpi kpi-verde"><p class="etiqueta t-medio">Productos activos</p><p class="valor">14</p></div>
+        <div class="kpi"><p class="etiqueta t-medio">Solicitudes nuevas</p><p class="valor">6</p></div>
+        <div class="kpi kpi-amarillo"><p class="etiqueta t-medio">Sin responder</p><p class="valor">3</p></div>
+      </div>
+      <p class="aviso aviso-atencion cuerpo-s">Tienes 3 solicitudes sin responder hace más de 24 horas. <a href="#patterns">Verlas</a></p>
+    </div>
+
+    <div class="uk-grupo">
+      <h3>Diálogo de edición sobre el listado</h3>
+      <p class="cuerpo-s t-medio">La edición ocurre encima de la lista, no en otra pantalla, para que el productor no pierda el contexto. Lo usa Gestión de información.</p>
+      <div class="capa">
+        <div class="dialogo tarjeta" style="max-width:460px">
+          <header>
+            <div><p class="subtitulo">Editar producto</p><p class="nota t-medio">Aguacate hass</p></div>
+            <a href="#patterns" aria-label="Cerrar"><svg class="icono" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></a>
+          </header>
+          <div class="campo"><label for="p4">Existencias</label><input id="p4" type="text" value="12"></div>
+          <div class="campo"><label for="p5">Estado</label>
+            <select id="p5"><option>Disponible</option><option>Agotado</option></select>
+            <span class="ayuda">Marcar como agotado lo retira del catálogo, pero no lo borra.</span>
+          </div>
+          <div class="fila-acciones" style="margin-top:16px">
+            <button class="boton boton-secundario">Cancelar</button>
+            <button class="boton boton-primario">Guardar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="uk-grupo">
+      <h3>Estados de lista vacía y de confirmación</h3>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:var(--e-4)">
+        <div class="tarjeta" style="text-align:center;display:grid;gap:10px;justify-items:center">
+          <svg class="icono icono-l t-suave" viewBox="0 0 24 24"><path d="M3 8l9-4 9 4v8l-9 4-9-4V8Z"/><path d="M3 8l9 4 9-4"/><path d="M12 12v8"/></svg>
+          <p class="cuerpo-fuerte">Todavía no tienes productos</p>
+          <p class="cuerpo-s t-medio">Publica el primero y aparecerá en el catálogo de tu región.</p>
+          <button class="boton boton-primario">Publicar producto</button>
+        </div>
+        <div class="tarjeta" style="text-align:center;display:grid;gap:10px;justify-items:center">
+          <svg class="icono icono-l" style="color:var(--estado-exito)" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+          <p class="cuerpo-fuerte">Solicitud enviada</p>
+          <p class="cuerpo-s t-medio">El productor te responde por WhatsApp. Puedes seguir el estado en Mis solicitudes.</p>
+          <button class="boton boton-primario">Ir a mis solicitudes</button>
+        </div>
+      </div>
+      <p class="uk-pie">Ninguna pantalla de confirmación es un callejón sin salida: todas llevan a la siguiente tarea.</p>
+    </div>
+  </section>
+
+  <p class="uk-pie" style="margin-top:var(--e-7)">AgriMarket · UIKit de la Actividad 2 · Análisis y Diseño de Sistemas</p>
+</main>
+</body>
+</html>

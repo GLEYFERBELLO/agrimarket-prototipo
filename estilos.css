@@ -235,3 +235,68 @@ thead th { background: var(--superficie-fondo); border-top: 0; font-size: 14px; 
 
 .dos-columnas { display: grid; grid-template-columns: 1.4fr 1fr; gap: var(--e-5); align-items: start; }
 @media (max-width: 960px) { .dos-columnas { grid-template-columns: 1fr; } .grafico { height: 160px; } }
+
+/* ============================================================
+   UIKit: bloques, iconos y barras de navegacion
+   ============================================================ */
+
+/* ---------- Iconos ---------- */
+.icono { width: 24px; height: 24px; flex: none; stroke: currentColor; fill: none;
+  stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; display: block; }
+.icono-s { width: 20px; height: 20px; }
+.icono-l { width: 32px; height: 32px; }
+.icono-caja { display: grid; justify-items: center; gap: 8px; padding: 16px 8px;
+  border: 1px solid var(--superficie-borde); border-radius: var(--r-md);
+  background: var(--superficie-base); color: var(--texto-fuerte); text-align: center; }
+.rejilla-iconos { display: grid; grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)); gap: var(--e-3); }
+
+/* ---------- Barra de navegacion inferior (movil) ---------- */
+.nav-inferior { display: flex; background: var(--superficie-base);
+  border-top: 1px solid var(--superficie-borde); padding: 6px 4px; }
+.nav-inferior a { flex: 1; display: grid; justify-items: center; gap: 2px; padding: 8px 4px;
+  min-height: 56px; color: var(--texto-medio); font-size: 12px; border-radius: var(--r-sm); }
+.nav-inferior a:hover { text-decoration: none; background: var(--superficie-fondo); }
+.nav-inferior a[aria-current="page"] { color: var(--marca-primario-oscuro); font-weight: 600; }
+
+/* ---------- Barra superior con enlaces (escritorio) ---------- */
+.barra-enlaces { display: flex; align-items: center; gap: var(--e-5); }
+.barra-enlaces a { color: var(--texto-medio); font-size: 15px; padding: 8px 0; }
+.barra-enlaces a[aria-current="page"] { color: var(--texto-fuerte); font-weight: 600;
+  box-shadow: inset 0 -3px 0 var(--marca-primario); }
+
+/* ---------- Estructura de la pagina del UIKit ---------- */
+.uk-bloque { border-top: 3px solid var(--marca-primario); padding-top: var(--e-4); margin-top: var(--e-7); }
+.uk-bloque > header { display: grid; gap: 4px; margin-bottom: var(--e-5); }
+.uk-numero { font-size: 13px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--marca-primario); }
+.uk-grupo { background: var(--superficie-base); border: 1px solid var(--superficie-borde);
+  border-radius: var(--r-lg); padding: var(--e-5); display: grid; gap: var(--e-4); margin-bottom: var(--e-4); }
+.uk-grupo > h3 { margin: 0; font-size: 18px; line-height: 26px; }
+.uk-muestra { display: flex; flex-wrap: wrap; gap: var(--e-3); align-items: flex-start; }
+.uk-pie { font-size: 12px; line-height: 16px; color: var(--texto-medio); margin: 0; }
+
+/* Muestras de color */
+.rejilla-color { display: grid; grid-template-columns: repeat(auto-fill, minmax(172px, 1fr)); gap: var(--e-3); }
+.swatch { border: 1px solid var(--superficie-borde); border-radius: var(--r-md); overflow: hidden; background: var(--superficie-base); }
+.swatch .muestra { height: 64px; }
+.swatch .datos-color { padding: 10px 12px; display: grid; gap: 2px; }
+.swatch code { font-size: 12px; color: var(--texto-medio); font-family: ui-monospace, Consolas, monospace; }
+
+/* Muestras de espaciado y radio */
+.escala { display: grid; gap: 10px; }
+.escala .linea { display: flex; align-items: center; gap: var(--e-3); font-size: 13px; }
+.escala .marca-esp { background: var(--marca-primario); height: 16px; border-radius: 3px; flex: none; }
+.radios { display: flex; gap: var(--e-3); flex-wrap: wrap; }
+.radios .caja-radio { width: 92px; height: 72px; background: var(--marca-primario-suave);
+  border: 1px solid var(--marca-primario); display: grid; place-items: center; font-size: 12px; color: var(--marca-primario-oscuro); }
+
+/* Tabla de la escala tipografica */
+.tipos { display: grid; gap: var(--e-4); }
+.tipos .fila-tipo { display: grid; grid-template-columns: 180px 1fr; gap: var(--e-4); align-items: baseline;
+  padding-bottom: var(--e-3); border-bottom: 1px solid var(--superficie-borde); }
+.tipos .fila-tipo:last-child { border-bottom: 0; padding-bottom: 0; }
+
+@media (max-width: 760px) {
+  .tipos .fila-tipo { grid-template-columns: 1fr; gap: 4px; }
+  .uk-grupo { padding: var(--e-4); }
+}
