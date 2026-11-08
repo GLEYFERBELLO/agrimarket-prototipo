@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mis solicitudes · AgriMarket</title>
+<meta name="description" content="Consulta del estado de las solicitudes sin crear cuenta.">
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<header class="barra">
+  <div style="display:flex;align-items:center;gap:12px">
+    <a class="volver" href="index.html" aria-label="Volver">&#8592;</a>
+    <a class="marca" href="index.html"><span>Mis solicitudes</span></a>
+  </div>
+  
+</header>
+<main id="contenido" class="movil">
+  <p class="aviso aviso-exito cuerpo-s" role="status">Tu solicitud fue enviada al productor.</p>
+  <h1 class="titulo">Mis solicitudes</h1>
+  <form class="tarjeta campo">
+    <label for="consulta">Consulta tus solicitudes</label>
+    <input id="consulta" name="consulta" value="300 412 8890">
+    <p class="ayuda">Usa el telefono o correo con el que enviaste la solicitud.</p>
+  </form>
+  <p class="etiqueta t-medio">3 solicitudes</p>
+  <ul style="list-style:none;margin:0;padding:0;display:grid;gap:10px">
+    <li class="tarjeta" style="display:grid;gap:8px">
+      <span style="display:flex;justify-content:space-between;align-items:center;gap:8px">
+        <strong class="cuerpo-fuerte">Tomate chonto</strong><span class="insignia insignia-exito">Aceptada</span>
+      </span>
+      <span class="nota t-medio">5 kg &middot; Juan Carlos G.</span>
+      <span class="nota t-medio" style="background:var(--superficie-fondo);padding:10px 12px;border-radius:8px">El productor te contactara al 300 *** 0000</span>
+    </li>
+    <li class="tarjeta" style="display:grid;gap:8px">
+      <span style="display:flex;justify-content:space-between;align-items:center;gap:8px">
+        <strong class="cuerpo-fuerte">Cebolla larga</strong><span class="insignia insignia-aviso">Pendiente</span>
+      </span>
+      <span class="nota t-medio">3 lb &middot; Patricia R.</span>
+      <span class="nota t-medio" style="background:var(--superficie-fondo);padding:10px 12px;border-radius:8px">Esperando respuesta del productor</span>
+    </li>
+    <li class="tarjeta" style="display:grid;gap:8px">
+      <span style="display:flex;justify-content:space-between;align-items:center;gap:8px">
+        <strong class="cuerpo-fuerte">Mora</strong><span class="insignia insignia-error">Rechazada</span>
+      </span>
+      <span class="nota t-medio">2 kg &middot; Emily S.</span>
+      <span class="nota t-medio" style="background:var(--superficie-fondo);padding:10px 12px;border-radius:8px">Producto agotado &middot; Ver similares</span>
+    </li>
+  </ul>
+  <a class="boton boton-secundario boton-bloque" href="index.html">Seguir comprando</a>
+</main>
+</body>
+</html>

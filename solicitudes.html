@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Solicitudes recibidas · AgriMarket</title>
+<meta name="description" content="Gestion de solicitudes de compra recibidas por el productor.">
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<div class="panel">
+<nav class="lateral" aria-label="Menu del productor">
+  <a class="marca" href="panel.html"><span class="logo" aria-hidden="true"></span><span>AgriMarket</span></a>
+  <ul>
+    <li><a href="panel.html"><span class="punto" aria-hidden="true"></span>Inicio</a></li>
+    <li><a href="gestion.html"><span class="punto" aria-hidden="true"></span>Productos</a></li>
+    <li><a href="solicitudes.html" aria-current="page"><span class="punto" aria-hidden="true"></span>Solicitudes <span class="insignia insignia-exito">3</span></a></li>
+    <li><a href="reportes.html"><span class="punto" aria-hidden="true"></span>Reportes</a></li>
+    <li><a href="#"><span class="punto" aria-hidden="true"></span>Perfil</a></li>
+  </ul>
+</nav>
+<main id="contenido" class="ancho">
+  <h1 class="titulo">Solicitudes recibidas</h1>
+  <ul class="pestanas" style="max-width:420px">
+    <li><a href="solicitudes.html" aria-current="page">Nuevas (3)</a></li>
+    <li><a href="#">Aceptadas</a></li>
+    <li><a href="#">Rechazadas</a></li>
+  </ul>
+  <article class="tarjeta" style="display:grid;gap:16px;padding:20px 24px">
+    <div class="entre">
+      <div style="display:flex;gap:12px;align-items:center">
+        <span class="miniatura" style="width:44px;height:44px;border-radius:50%" aria-hidden="true"></span>
+        <div><strong class="cuerpo-fuerte">Maria Teresa L.</strong>
+          <p class="nota t-medio" style="margin:0">Recibida hace 20 minutos</p></div>
+      </div>
+      <span class="insignia insignia-aviso">Nueva</span>
+    </div>
+    <div class="datos">
+      <div class="dato"><p class="nota t-medio" style="margin:0">Producto</p><p class="cuerpo-fuerte" style="margin:0">Tomate chonto</p></div><div class="dato"><p class="nota t-medio" style="margin:0">Cantidad</p><p class="cuerpo-fuerte" style="margin:0">5 kg</p></div><div class="dato"><p class="nota t-medio" style="margin:0">Total estimado</p><p class="cuerpo-fuerte" style="margin:0">$22.500</p></div>
+      <div class="dato"><p class="nota t-medio" style="margin:0">Ubicacion</p><p class="cuerpo-fuerte" style="margin:0">Centro, Rionegro</p></div><div class="dato"><p class="nota t-medio" style="margin:0">Entrega</p><p class="cuerpo-fuerte" style="margin:0">Recoger en la finca</p></div><div class="dato"><p class="nota t-medio" style="margin:0">Contacto</p><p class="cuerpo-fuerte" style="margin:0">300 *** 0000</p></div>
+    </div>
+    <p style="display:flex;gap:12px;justify-content:flex-end;margin:0">
+      <a class="boton boton-secundario" href="panel.html">Rechazar</a>
+      <a class="boton boton-primario" href="panel.html">Aceptar solicitud</a>
+    </p>
+  </article>
+  <div class="aviso aviso-exito">
+    <strong class="cuerpo-fuerte">Al aceptar, el comprador ve tu telefono y los botones de llamada y WhatsApp</strong>
+    <p class="nota t-medio" style="margin:4px 0 0">Este ajuste salio de la prueba de usabilidad: los productores no sabian como contactar al comprador despues de aceptar.</p>
+  </div>
+</main>
+</div>
+</body>
+</html>

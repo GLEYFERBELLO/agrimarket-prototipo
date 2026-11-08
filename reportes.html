@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reportes · AgriMarket</title>
+<meta name="description" content="Reportes de solicitudes y productos del productor.">
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<div class="panel">
+<nav class="lateral" aria-label="Menu del productor">
+  <a class="marca" href="panel.html"><span class="logo" aria-hidden="true"></span><span>AgriMarket</span></a>
+  <ul>
+    <li><a href="panel.html"><span class="punto" aria-hidden="true"></span>Inicio</a></li>
+    <li><a href="gestion.html"><span class="punto" aria-hidden="true"></span>Productos</a></li>
+    <li><a href="solicitudes.html"><span class="punto" aria-hidden="true"></span>Solicitudes <span class="insignia insignia-exito">3</span></a></li>
+    <li><a href="reportes.html" aria-current="page"><span class="punto" aria-hidden="true"></span>Reportes</a></li>
+    <li><a href="#"><span class="punto" aria-hidden="true"></span>Perfil</a></li>
+  </ul>
+</nav>
+<main id="contenido" class="ancho">
+  <div class="entre">
+    <div><h1 class="titulo">Reportes</h1>
+      <p class="cuerpo-s t-medio" style="margin:4px 0 0">Como se estan moviendo tus productos</p></div>
+    <ul class="chips" role="group" aria-label="Periodo">
+      <li><a class="chip" href="reportes.html">7 dias</a></li>
+      <li><span class="chip activo" aria-current="true">30 dias</span></li>
+      <li><a class="chip" href="reportes.html">Todo</a></li>
+    </ul>
+  </div>
+  <div class="kpis" style="grid-template-columns:repeat(4,1fr)">
+    <div class="kpi kpi-verde"><p class="cuerpo-s t-medio" style="margin:0">Solicitudes recibidas</p>
+      <p class="valor" style="margin:0">34</p><p class="nota t-medio" style="margin:0">en los ultimos 30 dias</p></div>
+    <div class="kpi "><p class="cuerpo-s t-medio" style="margin:0">Aceptadas</p>
+      <p class="valor" style="margin:0">21</p><p class="nota t-medio" style="margin:0">62% del total</p></div>
+    <div class="kpi "><p class="cuerpo-s t-medio" style="margin:0">Tiempo de respuesta</p>
+      <p class="valor" style="margin:0">4 h</p><p class="nota t-medio" style="margin:0">promedio desde que llega</p></div>
+    <div class="kpi kpi-amarillo"><p class="cuerpo-s t-medio" style="margin:0">Sin responder</p>
+      <p class="valor" style="margin:0">3</p><p class="nota t-medio" style="margin:0">mas de 24 horas</p></div>
+  </div>
+  <div class="dos-columnas">
+    <section class="tarjeta">
+      <h2 class="subtitulo" style="margin:0 0 4px">Solicitudes por semana</h2>
+      <p class="nota t-medio" style="margin:0">Cantidad de solicitudes que recibiste cada semana</p>
+      <div class="grafico" role="img" aria-label="Semana 1: 5 solicitudes. Semana 2: 8. Semana 3: 9. Semana 4: 12.">
+        <div class="col"><div class="barra" style="height:42%"></div>
+      <span class="val">5</span><span class="eje">Sem 1</span></div><div class="col"><div class="barra" style="height:66%"></div>
+      <span class="val">8</span><span class="eje">Sem 2</span></div><div class="col"><div class="barra" style="height:75%"></div>
+      <span class="val">9</span><span class="eje">Sem 3</span></div><div class="col"><div class="barra" style="height:100%"></div>
+      <span class="val">12</span><span class="eje">Sem 4</span></div>
+      </div>
+    </section>
+    <section class="tarjeta">
+      <h2 class="subtitulo" style="margin:0 0 12px">Solicitudes por estado</h2>
+      <div class="proporcion" role="img" aria-label="Aceptadas 62 por ciento, pendientes 23 por ciento, rechazadas 15 por ciento">
+        <span style="width:62%;background:var(--marca-primario)"></span>
+        <span style="width:23%;background:var(--estado-aviso)"></span>
+        <span style="width:15%;background:var(--estado-error)"></span>
+      </div>
+      <ul class="leyenda">
+        <li><span class="punto-leyenda" style="background:var(--marca-primario)"></span>Aceptadas &middot; 21 (62%)</li>
+        <li><span class="punto-leyenda" style="background:var(--estado-aviso)"></span>Pendientes &middot; 8 (23%)</li>
+        <li><span class="punto-leyenda" style="background:var(--estado-error)"></span>Rechazadas &middot; 5 (15%)</li>
+      </ul>
+    </section>
+  </div>
+  <table>
+    <caption>Productos mas solicitados</caption>
+    <thead><tr><th>Producto</th><th>Solicitudes</th><th>Cantidad pedida</th><th>Estado</th></tr></thead>
+    <tbody>
+      <tr><td data-col="Producto"><strong class="cuerpo-fuerte">Tomate chonto</strong></td>
+          <td data-col="Solicitudes" class="cuerpo-s t-medio">14</td>
+          <td data-col="Cantidad" class="cuerpo-s t-medio">62 kg</td>
+          <td><span class="insignia insignia-exito">Activo</span></td></tr>
+      <tr><td data-col="Producto"><strong class="cuerpo-fuerte">Cebolla larga</strong></td>
+          <td data-col="Solicitudes" class="cuerpo-s t-medio">9</td>
+          <td data-col="Cantidad" class="cuerpo-s t-medio">31 lb</td>
+          <td><span class="insignia insignia-exito">Activo</span></td></tr>
+      <tr><td data-col="Producto"><strong class="cuerpo-fuerte">Mora de castilla</strong></td>
+          <td data-col="Solicitudes" class="cuerpo-s t-medio">7</td>
+          <td data-col="Cantidad" class="cuerpo-s t-medio">14 kg</td>
+          <td><span class="insignia insignia-neutra">Agotado</span></td></tr>
+    </tbody>
+  </table>
+  <p class="aviso aviso-marca nota">Las cifras de esta pantalla son datos de ejemplo para el prototipo. No provienen de uso real de la plataforma.</p>
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Crear cuenta · validacion · AgriMarket</title>
+<meta name="description" content="Estado de validacion del formulario de registro.">
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<header class="barra">
+  <a class="marca" href="index.html"><span class="logo" aria-hidden="true"></span><span>AgriMarket</span></a>
+  <a class="cuerpo-s" href="index.html">&iquest;Vas a comprar? Ir al catalogo &#8594;</a>
+</header>
+<main id="contenido" class="acceso">
+  <section class="valor-panel">
+      <p style="margin:0"><span class="insignia" style="background:var(--superficie-base);color:var(--marca-primario-oscuro)">Cuenta de productor</span></p>
+      <h2 class="titulo t-marca" style="margin:0">Vende directo,<br>sin intermediarios</h2>
+      <ul>
+        <li><span class="vineta" aria-hidden="true"></span>Publica tus productos en 3 pasos</li>
+        <li><span class="vineta" aria-hidden="true"></span>Recibe solicitudes de compra en tu celular</li>
+        <li><span class="vineta" aria-hidden="true"></span>Acuerda pago y entrega con el comprador</li>
+      </ul>
+      <p class="nota t-medio" style="background:var(--superficie-base);padding:12px 14px;border-radius:10px;margin:0">
+        Los compradores no necesitan cuenta: pueden pedir y consultar su solicitud sin registrarse.</p>
+    </section>
+  <form class="formulario" novalidate>
+    <ul class="pestanas">
+        <li><a href="#">Iniciar sesion</a></li>
+        <li><a href="registro.html" aria-current="page">Registrarme</a></li>
+      </ul>
+    <h1 class="subtitulo" style="margin:0">Crear cuenta de productor</h1>
+    <div class="campo">
+      <label for="nombre">Nombre completo <span class="obligatorio" aria-hidden="true">*</span></label>
+      <input id="nombre" value="Juan Carlos Gomez" required>
+    </div>
+    <div class="campo error">
+      <label for="correo">Correo electronico <span class="obligatorio" aria-hidden="true">*</span></label>
+      <input id="correo" type="email" value="juancarlos@gmail.com" aria-invalid="true" aria-describedby="e-correo" required>
+      <p class="ayuda" id="e-correo" role="alert">Este correo ya esta registrado. Inicia sesion o usa otro correo.</p>
+    </div>
+    <div class="campo error">
+      <label for="clave">Contrasena <span class="obligatorio" aria-hidden="true">*</span></label>
+      <input id="clave" type="password" value="12345" aria-invalid="true" aria-describedby="e-clave" required>
+      <p class="ayuda" id="e-clave" role="alert">Usa al menos 8 caracteres.</p>
+    </div>
+    <div class="campo">
+      <label for="tel">Telefono / WhatsApp</label>
+      <input id="tel" type="tel" value="300 412 8890">
+      <p class="ayuda">Lo usan los compradores para acordar la entrega.</p>
+    </div>
+    <div class="campo">
+      <label for="municipio">Municipio / vereda</label>
+      <input id="municipio" value="Rionegro, Antioquia">
+    </div>
+    <button class="boton boton-primario boton-bloque" type="submit">Crear cuenta</button>
+    <p class="cuerpo-s" style="text-align:center;margin:0">&iquest;Ya tienes cuenta? <a href="#">Inicia sesion</a></p>
+  </form>
+</main>
+</body>
+</html>

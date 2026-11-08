@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Publicar producto · AgriMarket</title>
+<meta name="description" content="Formulario guiado de publicacion de producto en tres pasos.">
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<div class="panel">
+<nav class="lateral" aria-label="Menu del productor">
+  <a class="marca" href="panel.html"><span class="logo" aria-hidden="true"></span><span>AgriMarket</span></a>
+  <ul>
+    <li><a href="panel.html"><span class="punto" aria-hidden="true"></span>Inicio</a></li>
+    <li><a href="gestion.html" aria-current="page"><span class="punto" aria-hidden="true"></span>Productos</a></li>
+    <li><a href="solicitudes.html"><span class="punto" aria-hidden="true"></span>Solicitudes <span class="insignia insignia-exito">3</span></a></li>
+    <li><a href="reportes.html"><span class="punto" aria-hidden="true"></span>Reportes</a></li>
+    <li><a href="#"><span class="punto" aria-hidden="true"></span>Perfil</a></li>
+  </ul>
+</nav>
+<main id="contenido" class="ancho">
+  <h1 class="titulo">Publicar producto</h1>
+  <ol class="chips" style="gap:16px">
+    <li><span class="chip">1. Datos del producto</span></li>
+    <li><span class="chip activo" aria-current="step">2. Precio y cantidad</span></li>
+    <li><span class="chip">3. Foto</span></li>
+  </ol>
+  <form style="display:grid;grid-template-columns:1fr 420px;gap:24px;align-items:start" action="panel.html">
+    <section class="tarjeta" style="display:grid;gap:18px;padding:24px">
+      <h2 class="subtitulo" style="margin:0">2. Precio y cantidad</h2>
+      <div style="display:flex;gap:16px">
+        <div class="campo" style="flex:1">
+          <label for="precio">Precio (COP) <span class="obligatorio" aria-hidden="true">*</span></label>
+          <input id="precio" inputmode="numeric" value="4.500" required>
+        </div>
+        <div class="campo" style="flex:1">
+          <label for="cant">Cantidad disponible <span class="obligatorio" aria-hidden="true">*</span></label>
+          <input id="cant" inputmode="numeric" value="50" required>
+        </div>
+      </div>
+      <fieldset style="border:0;padding:0;margin:0;display:grid;gap:8px">
+        <legend class="etiqueta" style="padding:0">Se vende por</legend>
+        <ul class="chips">
+          <li><span class="chip activo" aria-current="true">kg</span></li>
+          <li><span class="chip">libra</span></li>
+          <li><span class="chip">unidad</span></li>
+          <li><span class="chip">atado</span></li>
+        </ul>
+        <p class="nota t-medio">Se mostrara como: $4.500 / kg</p>
+      </fieldset>
+    </section>
+    <section class="tarjeta" style="display:grid;gap:14px;padding:24px">
+      <h2 class="subtitulo" style="margin:0">3. Foto del producto</h2>
+      <div class="aviso aviso-marca" style="text-align:center;padding:36px 20px">
+        <strong class="cuerpo-fuerte">Elegir foto</strong>
+        <p class="nota t-medio" style="margin:8px 0 0">Una foto. Se comprime automaticamente para zonas con poca senal.</p>
+      </div>
+      <div class="campo"><label for="foto">Archivo</label><input id="foto" type="file" accept="image/*"></div>
+    </section>
+    <p style="grid-column:1/-1;display:flex;gap:12px;justify-content:flex-end;margin:0">
+      <a class="boton boton-secundario" href="panel.html">Atras</a>
+      <button class="boton boton-primario" type="submit">Siguiente</button>
+    </p>
+  </form>
+</main>
+</div>
+</body>
+</html>

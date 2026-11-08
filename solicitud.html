@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Solicitar compra · AgriMarket</title>
+<meta name="description" content="Formulario corto de solicitud de compra, sin registro.">
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<header class="barra">
+  <div style="display:flex;align-items:center;gap:12px">
+    <a class="volver" href="producto.html" aria-label="Volver">&#8592;</a>
+    <a class="marca" href="index.html"><span>Solicitar compra</span></a>
+  </div>
+  
+</header>
+<main id="contenido" class="movil">
+  <h1 class="titulo">Solicitar compra</h1>
+  <div class="tarjeta producto">
+    <span class="miniatura" style="width:48px;height:48px" aria-hidden="true"></span>
+    <span><strong class="cuerpo-fuerte">Tomate chonto</strong>
+      <span class="nota t-medio" style="display:block">$4.500/kg &middot; Juan Carlos G.</span></span>
+  </div>
+  <form action="mis-solicitudes.html" style="display:grid;gap:16px">
+    <div class="campo">
+      <label for="cantidad">Cantidad <span class="obligatorio" aria-hidden="true">*</span></label>
+      <input id="cantidad" name="cantidad" type="number" value="5" min="1" required>
+      <p class="ayuda">Se vende por kg. Total estimado: $22.500</p>
+    </div>
+    <div class="campo">
+      <label for="nombre">Nombre <span class="obligatorio" aria-hidden="true">*</span></label>
+      <input id="nombre" name="nombre" value="Maria Teresa L." required>
+    </div>
+    <div class="campo">
+      <label for="tel">Telefono / WhatsApp <span class="obligatorio" aria-hidden="true">*</span></label>
+      <input id="tel" name="tel" type="tel" value="300 412 8890" required>
+      <p class="ayuda">Con este numero consultas tu solicitud despues, sin crear cuenta.</p>
+    </div>
+    <div class="campo">
+      <label for="barrio">Barrio o ubicacion <span class="obligatorio" aria-hidden="true">*</span></label>
+      <input id="barrio" name="barrio" value="Centro, Rionegro" required>
+    </div>
+    <fieldset style="border:0;padding:0;margin:0;display:grid;gap:8px">
+      <legend class="etiqueta" style="padding:0">&iquest;Como prefieres recibirlo?</legend>
+      <label class="tarjeta" style="display:flex;gap:10px;align-items:center;border-color:var(--marca-primario);background:var(--marca-primario-suave)">
+        <input type="radio" name="entrega" value="finca" checked> Recoger en la finca</label>
+      <label class="tarjeta" style="display:flex;gap:10px;align-items:center">
+        <input type="radio" name="entrega" value="punto"> Punto acordado con el productor</label>
+    </fieldset>
+    <p class="aviso aviso-atencion nota">Esta solicitud no tiene costo. El productor te contactara para acordar pago y entrega.</p>
+    <button class="boton boton-primario boton-bloque" type="submit">Enviar solicitud</button>
+  </form>
+</main>
+</body>
+</html>

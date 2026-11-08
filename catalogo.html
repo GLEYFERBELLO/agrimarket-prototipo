@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Catalogo · AgriMarket</title>
+<meta name="description" content="Busqueda y filtro de productos por categoria.">
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<header class="barra">
+  <div style="display:flex;align-items:center;gap:12px">
+    <a class="volver" href="index.html" aria-label="Volver">&#8592;</a>
+    <a class="marca" href="index.html"><span>Catalogo</span></a>
+  </div>
+  
+</header>
+<main id="contenido" class="movil">
+  <h1 class="titulo">Catalogo</h1>
+  <form class="campo" role="search">
+    <label for="q2">Buscar producto o productor</label>
+    <input id="q2" name="q" type="search" value="tomate">
+  </form>
+  <ul class="chips">
+    <li><span class="chip activo" aria-current="true">Todas</span></li>
+    <li><a class="chip" href="catalogo.html">Frutas</a></li>
+    <li><a class="chip" href="catalogo.html">Verduras</a></li>
+    <li><a class="chip" href="catalogo.html">Hortalizas</a></li>
+  </ul>
+  <p class="nota t-medio">24 productos encontrados</p>
+  <ul style="list-style:none;margin:0;padding:0;display:grid;gap:10px">
+    <li>
+      <a class="tarjeta producto" href="producto.html">
+        <span class="miniatura" aria-hidden="true"></span>
+        <span style="flex:1">
+          <span style="display:flex;justify-content:space-between;align-items:center;gap:8px">
+            <strong class="cuerpo-fuerte">Tomate chonto</strong>
+            <span class="insignia insignia-exito">Disponible</span>
+          </span>
+          <span class="cuerpo t-marca" style="display:block">$4.500 / kg</span>
+          <span class="nota t-medio" style="display:block">Juan Carlos G. &middot; Rionegro</span>
+        </span>
+      </a>
+    </li>
+    <li>
+      <a class="tarjeta producto" href="producto.html">
+        <span class="miniatura" aria-hidden="true"></span>
+        <span style="flex:1">
+          <span style="display:flex;justify-content:space-between;align-items:center;gap:8px">
+            <strong class="cuerpo-fuerte">Cebolla larga</strong>
+            <span class="insignia insignia-exito">Disponible</span>
+          </span>
+          <span class="cuerpo t-marca" style="display:block">$3.200 / lb</span>
+          <span class="nota t-medio" style="display:block">Patricia R. &middot; Marinilla</span>
+        </span>
+      </a>
+    </li>
+    <li>
+      <a class="tarjeta producto" href="producto.html">
+        <span class="miniatura" aria-hidden="true"></span>
+        <span style="flex:1">
+          <span style="display:flex;justify-content:space-between;align-items:center;gap:8px">
+            <strong class="cuerpo-fuerte">Mora de castilla</strong>
+            <span class="insignia insignia-neutra">Agotado</span>
+          </span>
+          <span class="cuerpo t-marca" style="display:block">$6.000 / kg</span>
+          <span class="nota t-medio" style="display:block">Emily S. &middot; La Ceja</span>
+        </span>
+      </a>
+    </li>
+  </ul>
+</main>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Iniciar sesion · AgriMarket</title>
+<meta name="description" content="Inicio de sesion de productores en AgriMarket.">
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<header class="barra">
+  <a class="marca" href="index.html"><span class="logo" aria-hidden="true"></span><span>AgriMarket</span></a>
+  <a class="cuerpo-s" href="index.html">&iquest;Vas a comprar? Ir al catalogo &#8594;</a>
+</header>
+<main id="contenido" class="acceso">
+  <section class="valor-panel">
+      <p style="margin:0"><span class="insignia" style="background:var(--superficie-base);color:var(--marca-primario-oscuro)">Cuenta de productor</span></p>
+      <h2 class="titulo t-marca" style="margin:0">Vende directo,<br>sin intermediarios</h2>
+      <ul>
+        <li><span class="vineta" aria-hidden="true"></span>Publica tus productos en 3 pasos</li>
+        <li><span class="vineta" aria-hidden="true"></span>Recibe solicitudes de compra en tu celular</li>
+        <li><span class="vineta" aria-hidden="true"></span>Acuerda pago y entrega con el comprador</li>
+      </ul>
+      <p class="nota t-medio" style="background:var(--superficie-base);padding:12px 14px;border-radius:10px;margin:0">
+        Los compradores no necesitan cuenta: pueden pedir y consultar su solicitud sin registrarse.</p>
+    </section>
+  <form class="formulario" action="panel.html" novalidate>
+    <ul class="pestanas">
+        <li><a href="login.html" aria-current="page">Iniciar sesion</a></li>
+        <li><a href="registro.html">Registrarme</a></li>
+      </ul>
+    <h1 class="subtitulo" style="margin:0">Entra a tu cuenta</h1>
+    
+    <div class="campo">
+      <label for="correo">Correo electronico <span class="obligatorio" aria-hidden="true">*</span></label>
+      <input id="correo" name="correo" type="email" autocomplete="email" placeholder="correo@ejemplo.com" required>
+    </div>
+    <div class="campo">
+      <label for="clave">Contrasena <span class="obligatorio" aria-hidden="true">*</span></label>
+      <input id="clave" name="clave" type="password" autocomplete="current-password" placeholder="Tu contrasena" required>
+    </div>
+    <p style="text-align:right;margin:0"><a class="cuerpo-s" href="#">&iquest;Olvidaste tu contrasena?</a></p>
+    <button class="boton boton-primario boton-bloque" type="submit">Ingresar</button>
+    <p class="cuerpo-s" style="text-align:center;margin:0">&iquest;No tienes cuenta? <a href="registro.html">Registrate</a></p>
+  </form>
+</main>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inicio · AgriMarket</title>
+<meta name="description" content="Catalogo publico de productos agricolas locales.">
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<header class="barra">
+  <div style="display:flex;align-items:center;gap:12px">
+    
+    <a class="marca" href="index.html"><span class="logo" aria-hidden="true"></span><span>AgriMarket</span></a>
+  </div>
+  <a class="cuerpo-s" href="registro.html">Soy productor</a>
+</header>
+<main id="contenido" class="movil">
+  <h1 class="titulo">Productos frescos, directo del productor</h1>
+  <form class="campo" role="search" action="catalogo.html">
+    <label for="q">Buscar producto o productor</label>
+    <input id="q" name="q" type="search" placeholder="Buscar tomate, cebolla...">
+  </form>
+  <h2 class="subtitulo">Categorias</h2>
+  <ul class="chips">
+    <li><a class="chip" href="catalogo.html">Frutas</a></li>
+    <li><a class="chip" href="catalogo.html">Verduras</a></li>
+    <li><a class="chip" href="catalogo.html">Hortalizas</a></li>
+    <li><a class="chip" href="catalogo.html">Hierbas</a></li>
+  </ul>
+  <h2 class="subtitulo">Disponible hoy cerca de ti</h2>
+  <ul style="list-style:none;margin:0;padding:0;display:grid;gap:10px">
+    <li>
+      <a class="tarjeta producto" href="producto.html">
+        <span class="miniatura" aria-hidden="true"></span>
+        <span style="flex:1">
+          <span style="display:flex;justify-content:space-between;align-items:center;gap:8px">
+            <strong class="cuerpo-fuerte">Tomate chonto</strong>
+            <span class="insignia insignia-exito">Disponible</span>
+          </span>
+          <span class="cuerpo t-marca" style="display:block">$4.500 / kg</span>
+          <span class="nota t-medio" style="display:block">Juan Carlos G. &middot; Rionegro</span>
+        </span>
+      </a>
+    </li>
+    <li>
+      <a class="tarjeta producto" href="producto.html">
+        <span class="miniatura" aria-hidden="true"></span>
+        <span style="flex:1">
+          <span style="display:flex;justify-content:space-between;align-items:center;gap:8px">
+            <strong class="cuerpo-fuerte">Cilantro</strong>
+            <span class="insignia insignia-exito">Disponible</span>
+          </span>
+          <span class="cuerpo t-marca" style="display:block">$1.500 / atado</span>
+          <span class="nota t-medio" style="display:block">Carlos M. &middot; Rionegro</span>
+        </span>
+      </a>
+    </li>
+  </ul>
+  <a class="aviso aviso-marca" href="mis-solicitudes.html" style="display:block">
+    <strong class="cuerpo-fuerte">&iquest;Ya enviaste una solicitud?</strong>
+    <span class="nota t-medio" style="display:block">Consulta su estado con tu telefono, sin crear cuenta.</span>
+  </a>
+</main>
+</body>
+</html>

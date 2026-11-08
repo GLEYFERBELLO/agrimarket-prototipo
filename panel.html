@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Panel del productor · AgriMarket</title>
+<meta name="description" content="Resumen de productos y solicitudes del productor.">
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<div class="panel">
+<nav class="lateral" aria-label="Menu del productor">
+  <a class="marca" href="panel.html"><span class="logo" aria-hidden="true"></span><span>AgriMarket</span></a>
+  <ul>
+    <li><a href="panel.html" aria-current="page"><span class="punto" aria-hidden="true"></span>Inicio</a></li>
+    <li><a href="gestion.html"><span class="punto" aria-hidden="true"></span>Productos</a></li>
+    <li><a href="solicitudes.html"><span class="punto" aria-hidden="true"></span>Solicitudes <span class="insignia insignia-exito">3</span></a></li>
+    <li><a href="reportes.html"><span class="punto" aria-hidden="true"></span>Reportes</a></li>
+    <li><a href="#"><span class="punto" aria-hidden="true"></span>Perfil</a></li>
+  </ul>
+</nav>
+<main id="contenido" class="ancho">
+  <div class="entre">
+    <div><h1 class="titulo">Hola, Juan Carlos</h1>
+      <p class="cuerpo-s t-medio" style="margin:4px 0 0">Este es el resumen de tu finca en AgriMarket</p></div>
+    <a class="boton boton-primario" href="publicar.html">+ Publicar producto</a>
+  </div>
+  <div class="kpis">
+    <div class="kpi kpi-verde"><p class="cuerpo-s t-medio" style="margin:0">Productos activos</p><p class="valor" style="margin:0">8</p></div>
+    <div class="kpi kpi-amarillo"><p class="cuerpo-s t-medio" style="margin:0">Solicitudes nuevas</p><p class="valor" style="margin:0">3</p></div>
+    <div class="kpi"><p class="cuerpo-s t-medio" style="margin:0">Agotados</p><p class="valor" style="margin:0">2</p></div>
+  </div>
+  <div class="aviso aviso-atencion entre">
+    <strong class="cuerpo-fuerte">3 solicitudes nuevas esperan respuesta</strong>
+    <a class="boton boton-secundario" href="solicitudes.html">Ver solicitudes</a>
+  </div>
+  <table>
+    <caption>Mis productos</caption>
+    <thead><tr><th>Producto</th><th>Precio</th><th>Stock</th><th>Estado</th><th>Acciones</th></tr></thead>
+    <tbody>
+      <tr>
+      <td data-col="Producto"><strong class="cuerpo-fuerte">Tomate chonto</strong></td>
+      <td data-col="Precio" class="cuerpo-s t-medio">$4.500 / kg</td>
+      <td data-col="Stock" class="cuerpo-s t-medio">50 kg</td>
+      <td data-col="Estado"><span class="insignia insignia-exito">Activo</span></td>
+      <td><span class="fila-acciones"><a href="publicar.html">Editar</a><a href="#">Marcar agotado</a></span></td>
+    </tr>
+      <tr>
+      <td data-col="Producto"><strong class="cuerpo-fuerte">Repollo</strong></td>
+      <td data-col="Precio" class="cuerpo-s t-medio">$3.000 / unidad</td>
+      <td data-col="Stock" class="cuerpo-s t-medio">40 und</td>
+      <td data-col="Estado"><span class="insignia insignia-exito">Activo</span></td>
+      <td><span class="fila-acciones"><a href="publicar.html">Editar</a><a href="#">Marcar agotado</a></span></td>
+    </tr>
+      <tr>
+      <td data-col="Producto"><strong class="cuerpo-fuerte">Cilantro</strong></td>
+      <td data-col="Precio" class="cuerpo-s t-medio">$1.500 / atado</td>
+      <td data-col="Stock" class="cuerpo-s t-medio">0</td>
+      <td data-col="Estado"><span class="insignia insignia-neutra">Agotado</span></td>
+      <td><span class="fila-acciones"><a href="publicar.html">Editar</a><a href="#">Reactivar</a></span></td>
+    </tr>
+    </tbody>
+  </table>
+</main>
+</div>
+</body>
+</html>
